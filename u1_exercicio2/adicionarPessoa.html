@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt_br">
 <head>
-    <title>PWeb - by Xico Arruda</title>
+    <CodigoSecreto=291172008 />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title> PWeb - by Alexsandro Rocha Junior</title>
 </head>
 
 <body>
+<ul class="topnav">
+        <li><a href="index.html">Início</a></li>
+        <li><a class="active" href="adicionarPessoa.html">Cadastro</a></li>
+        <li><a href="listarPessoas.html">Listar pessoas</a></li>
+        <li><a href="noticias.html">Canais de notícias</a></li>
+        <li><a href="contato.html">Mande-nos um Email</a></li>  
+        <li><a href="sobre.html">Sobre</a></li>
+    
+      </ul>
 
+    
+
+
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+		<hr />
+	<h1>	Insira os dados corretamente! </h1>
+
+		<form action="adicionadaComSucesso.html" method="get">
+	<p>
+	Nome completo* : <input type="text" placeholder="Seu Nome Completo">
+	</p>	
+	<p>
+		Data de nascimento* : <input type="date" placeholder="dd/mm/aaaa">
+		</p>
+		<p>
+			E-Mail* : <input type="email" placeholder="example@example.com">
+			</p>
+			<p>
+				Sexo* :</p> <input type="radio" name="sexo" value="Masculino"  > 
+				Masculino
+			</p>
+			<p>
+				</p> <input type="radio" name="sexo" value="Feminino"  > 
+				Feminino
+			</p>		
+			<p>
+				</p> <input type="radio" name="sexo" value="não informado"  > 
+				Prefiro não informar.
+			</p>	
+
+				
+				<p>
+                    <input type="reset" value="Limpar" p style = "color:aliceblue; background-color: rgb(36, 181, 204); font-size:15px; font-weight:bold; width:100; height:50; font-family:Arial, Helvetica, sans-serif;">
+					
+                    <input type="submit" value="Cadastrar"	p style = "color:aliceblue; background-color: rgb(36, 181, 204); font-size:15px; font-weight:bold; width:100; height:50; font-family:Arial, Helvetica, sans-serif;">
+
+		
+				</p>
+                * Campo obrigatório
+				
+
+	</form>
+	</div>
 </body>
 
 </html>
