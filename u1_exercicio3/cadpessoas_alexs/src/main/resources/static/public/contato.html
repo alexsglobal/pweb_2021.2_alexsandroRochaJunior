@@ -3,18 +3,19 @@
     <head>
     <CodigoSecreto=291172008 />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <link th:href="@{/public/favicon.ico}" rel= "icon" type="image/x-icon" /> 
+    <link th:href="@{/css/style.css}" rel="stylesheet"/>
     <title> PWeb - by Alexsandro Rocha Junior</title>
 </head>
 
 <body>
     <ul class="topnav">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="adicionarPessoa.html">Cadastro</a></li>
-        <li><a href="listarPessoas.html">Listar pessoas</a></li>
-        <li><a href="noticias.html">Canais de notícias</a></li>
-        <li><a class ="active" href ="contato.html">Mande-nos um Email</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
+        <th><li><a href="/">Início</a></li> </th>
+        <th><li><a href="/adicionarPessoa">Cadastro</a></li> </th>
+        <th><li><a href="/listarPessoas">Listar pessoas</a></li> </th>
+        <th><li><a href="/public/noticias.html">Canais de notícias</a></li> </th>
+        <th><li><a href="/public/contato.html"class="active">Mande-nos um Email</a></li> </th>
+   <th> <li><a href="/public/sobre.html">Sobre</a></li> </th>
       </ul>
 
       
