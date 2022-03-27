@@ -4,7 +4,7 @@
     <CodigoSecreto=291172008 />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link th:href="@{/public/favicon.ico}" rel= "icon" type="image/x-icon" /> 
-    <link th:href="@{/css/style.css}" rel="stylesheet"/>
+    <link th:href="@{/style/style.css}" rel="stylesheet"/>
     <title> PWeb - by Alexsandro Rocha Junior</title>
 </head>
 
@@ -33,32 +33,26 @@
         <th>Sexo</th>
         <th>Editar</th>
       </tr>
-      <tr>
-        <td>Barata</td>
-        <td>19/06/????</td>
-        <td><a href="mailto:Barata@baratahoo.com">Barata@baratahoo.com</a></td>
-        <td>Masculino</td>
-        <td><a href="editarPessoa.html">Editar</a> <a href="#">  Remover</a>     </td>
+      <tr th:each="pessoa: ${pessoas}">
+      <td th:text="${pessoa.id}"></td>
+      <td th:text="${pessoa.nome}"></td>
+      <td>
+      <a th:href= "'mailto:'+${pessoa.email}"th:text="${pessoa.email}"></a>
+      </td>
+      <td th:text="${#temporals.format(pessoa.dataNascimento,'dd/MM/yyyy')}"></td>
+      <td th:text="${pessoa.genero}"> </td>
+      <td>
+      <a th:href "@{/editar/{id}(id=${pessoa.id})}"> Editar </a>
+      </td>
+      <td>
+      <a th:href "@{/remover/{id}(id=${pessoa.id})}"> Remover </a>
+      </td>
+      
+       
+        
     
      </tr>
     
-      <tr>
-        <td>Junior</td>
-        <td>21/04/1997</td>
-        <td><a href="mailto:Junior@hotmail.com">Junior@hotmail.com</a></td>
-        <td>Masculino</td>
-        <td><a href="editarPessoa.html">Editar</a> <a href="#">  Remover</a>     </td>
-    
-     </tr>
-    
-      <tr>
-        <td>Biscoito</td>
-        <td>21/04/1965</td>
-        <td><a href="mailto:Biscoito@outlook.com">Biscoito@outlook.com</a></td>
-        <td>Masculino</td>
-        <td><a href="editarPessoa.html">Editar</a> <a href="#">  Remover</a>     </td>
-    
-     </tr>
     </p>
     </table>
     
