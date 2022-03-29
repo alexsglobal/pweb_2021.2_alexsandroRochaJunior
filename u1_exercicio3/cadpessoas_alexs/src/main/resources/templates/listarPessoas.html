@@ -15,7 +15,7 @@
       <th><li><a class ="active" href="/listarPessoas">Listar pessoas</a></li> </th>
       <th><li><a href="/public/noticias.html">Canais de notícias</a></li> </th>
       <th><li><a href="/public/contato.html">Mande-nos um Email</a></li> </th>
- <th> <li><a href="/public/sobre.html">Sobre</a></li> </th>
+ <th> <li style="float:right"> <a href="/public/sobre.html" >Sobre</a></li> </th>
     
     
       </ul>
@@ -27,11 +27,13 @@
        
            
       <tr>
+        <th>ID</th>
         <th>Nome Completo</th>
         <th>Data De Nascimento</th>
         <th>E-mail</th>
         <th>Sexo</th>
         <th>Editar</th>
+        <th>Remover</th>
       </tr>
       <tr th:each="pessoa: ${pessoas}">
       <td th:text="${pessoa.id}"></td>
@@ -49,7 +51,7 @@
       </td>
       
        
-        
+        	
     
      </tr>
     
