@@ -33,9 +33,23 @@ public ModelAndView listarPessoas() {
 	return mav;
 	
 }
+@GetMapping ("/adicionarPessoa")
+public ModelAndView formAdicionarPessoa() {
+	ModelAndView modelAndView = new ModelAndView("adicionarPessoa");
+modelAndView.addObject(new Pessoa());	
+return modelAndView;
+
+}
+@PostMapping ("/adicionarPessoa")
+public String adicionarPessoa(Pessoa aSalvar) {
+this.pessoaRepo.save(aSalvar);
+return "redirect/listarPessoas";
+}
+
+
 
 @GetMapping ("/editar/{id}")
-public ModelAndView formeditarPessoa (@PathVariable("id")long id) {
+public ModelAndView formEditarPessoa (@PathVariable("id")long id) {
 
 Pessoa pessoa = pessoaRepo.findById(id)
 .orElseThrow(()  -> new IllegalArgumentException ("ID Inválido:" + id));

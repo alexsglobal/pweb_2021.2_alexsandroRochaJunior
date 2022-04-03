@@ -26,26 +26,30 @@
 		<hr />
 	<h1>	Insira os dados corretamente! </h1>
 
-		<form action="adicionadaComSucesso.html" method="get">
+		<form 
+		method="POST" 
+		th:object="${pessoa}"
+		th:action="@{/adicionarPessoa}" >
+		 
 	<p>
-	Nome completo* : <input type="text" placeholder="Seu Nome Completo">
+	Nome completo* : <input type="text" placeholder="Seu Nome Completo" th:field="*{nome}" required/>
 	</p>	
 	<p>
-		Data de nascimento* : <input type="date" placeholder="dd/mm/aaaa">
+		Data de nascimento* : <input type="date" placeholder="dd/mm/aaaa" th:field="*{dataNascimento}" required />
 		</p>
 		<p>
-			E-Mail* : <input type="email" placeholder="example@example.com">
+			E-Mail* : <input type="text" placeholder="example@example.com" th:field="*{email}" required />
 			</p>
 			<p>
-				Sexo* :</p> <input type="radio" name="sexo" value="Masculino"  > 
+				Sexo* :</p> <input type="radio" name="sexo" value="Masculino" th:field="*{genero}" required  /> 
 				Masculino
 			</p>
 			<p>
-				</p> <input type="radio" name="sexo" value="Feminino"  > 
+				</p> <input type="radio" name="sexo" value="Feminino" th:field="*{genero}" required  /> 
 				Feminino
 			</p>		
 			<p>
-				</p> <input type="radio" name="sexo" value="não informado"  > 
+				</p> <input type="radio" name="sexo" value="não informado" th:field="*{genero}" required  /> 
 				Prefiro não informar.
 			</p>	
 

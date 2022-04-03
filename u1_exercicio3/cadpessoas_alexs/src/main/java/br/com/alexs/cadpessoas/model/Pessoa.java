@@ -22,6 +22,8 @@ import lombok.NoArgsConstructor;
 @Table(name= "pessoas")
 
 public class Pessoa implements Serializable {
+
+	private static final long serialVersionUID = -8504394214416252325L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 private long id;
